@@ -113,8 +113,10 @@ endmodule
 ### TRUTH TABLE 
 
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/ad232f92-47f5-4af9-9182-dab892dbc1d1)
 
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/651a1322-f5f8-435b-ae51-ae1a5fde80bb)
 
 
 
