@@ -60,30 +60,54 @@ D7 = X Y Z
 
 
 ### PROGRAM 
+```
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 Developed by: 
 RegisterNumber:  
 */
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c); 
+output d0,d1,d2,d3,d4,d5,d6,d7;
+input a,b,c; 
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c); 
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c); 
+assign d4 = (a&~b&~c); 
+assign d5 = (a&~b&c); 
+assign d6 = (a&b&~c); 
+assign d7 = (a&b&c);
+endmodule
 
 
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7); 
+output a,b,c; 
+input d0,d1,d2,d3,d4,d5,d6,d7; 
+or(a,d4,d5,d6,d7); 
+or(b,d2,d3,d6,d7); 
+or(c,d1,d3,d5,d7); 
+endmodule
 
-
+```
 
 
 ### RTL LOGIC  
 
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/2829d3e3-c5f4-4760-9c9f-335b8b035a19)
 
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/9a3fdadd-c0ca-4c02-8840-6ea478b02ea4)
 
 
 
 
 ### TIMING DIGRAMS  
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/fb2616ca-8410-4b25-b8c9-98904343f06c)
 
 
+![image](https://github.com/Gokul049/Experiment-08-Encoders-and-decoders-/assets/131269675/e4d18bf1-1400-494a-8abe-dfd98dcd9fe3)
 
 
 ### TRUTH TABLE 
@@ -93,4 +117,6 @@ RegisterNumber:
 
 
 
+
 ### RESULTS 
+Thus the program to desing encoder and decoder is done.
